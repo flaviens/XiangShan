@@ -32,9 +32,11 @@ trait CSREvents { self: NewCSR =>
   val events: Seq[Module with CSREventBase] = Seq(
     trapEntryDEvent,
     trapEntryMEvent,
+    trapEntryMNEvent,
     trapEntryHSEvent,
     trapEntryVSEvent,
     mretEvent,
+    mnretEvent,
     sretEvent,
     dretEvent,
   )
@@ -44,6 +46,7 @@ trait CSREvents { self: NewCSR =>
   val trapEntryEvents: Seq[Module with CSREventBase] = Seq(
     trapEntryDEvent,
     trapEntryMEvent,
+    trapEntryMNEvent,
     trapEntryHSEvent,
     trapEntryVSEvent,
   )
